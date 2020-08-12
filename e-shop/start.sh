@@ -1,6 +1,9 @@
+docket built -t ravijaya/eshop:1.0 monolith
+docket built -t ravijaya/catalog:1.0 catalog
+
 docker run -d \
     --name traefik \
-    -p 8080:8080 \
+    -p 8082:8080 \
     -p 80:80 \
     -v /var/run/docker.sock:/var/run/docker.sock \
     traefik:v2.0 --api.insecure=true --providers.docker
